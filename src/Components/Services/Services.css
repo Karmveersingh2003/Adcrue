@@ -89,7 +89,7 @@
   text-align: center; font-family: var(--font-royal); letter-spacing: 1px;
   border-bottom: 1px solid var(--sadc-gold); position: sticky; top: 0; z-index: 100;
 }
-.service-adcure-nav-item { margin: 0 15px; cursor: pointer; transition: 0.3s; }
+.service-adcure-nav-item { margin: 0 15px; cursor: pointer; transition: 0.3s; display: inline-block; }
 .service-adcure-nav-item:hover { color: #fff; }
 .service-adcure-nav-sep { color: #555; }
 
@@ -101,7 +101,7 @@
 
 .service-adcure-split-row { display: flex; align-items: center; gap: 60px; }
 .service-adcure-split-row.reverse { flex-direction: row-reverse; }
-.service-adcure-text-col, .service-adcure-visual-col { flex: 1; }
+.service-adcure-text-col, .service-adcure-visual-col { flex: 1; width: 100%; }
 
 .service-adcure-body { font-size: 1.1rem; line-height: 1.8; color: #555; margin-bottom: 30px; }
 .text-light-dim { color: #ccc; }
@@ -114,8 +114,8 @@
 .service-adcure-highlight-box.dark-mode p { color: #999; }
 
 /* --- LIST GRID (SEO) --- */
-.service-adcure-list-grid { display: flex; gap: 40px; margin-top: 30px; }
-.service-adcure-ul { list-style: none; }
+.service-adcure-list-grid { display: flex; gap: 40px; margin-top: 30px; flex-wrap: wrap; }
+.service-adcure-ul { list-style: none; flex: 1; min-width: 200px; }
 .service-adcure-ul li {
   margin-bottom: 10px; padding-left: 20px; position: relative; font-family: var(--font-royal); font-size: 0.9rem;
 }
@@ -124,11 +124,11 @@
 }
 
 /* --- IMAGES --- */
-.service-adcure-img-frame { border: 1px solid var(--sadc-gold); padding: 15px; position: relative; }
+.service-adcure-img-frame { border: 1px solid var(--sadc-gold); padding: 15px; position: relative; width: 100%; }
 .service-adcure-img-frame.gold-border { border-color: #fff; }
 
 .service-adcure-img-inner {
-  width: 100%; height: 400px; background-size: cover; filter: grayscale(100%); transition: 0.5s;
+  width: 100%; height: 400px; background-size: cover; background-position: center; filter: grayscale(100%); transition: 0.5s;
 }
 .service-adcure-img-inner:hover { filter: grayscale(0%); }
 
@@ -142,7 +142,7 @@
 .service-adcure-stat-float span { font-family: var(--font-royal); font-size: 2.5rem; color: var(--sadc-gold); display: block; }
 
 /* --- PPC STATS --- */
-.service-adcure-stat-row { display: flex; gap: 30px; margin-top: 40px; border-top: 1px solid #333; padding-top: 20px; }
+.service-adcure-stat-row { display: flex; gap: 30px; margin-top: 40px; border-top: 1px solid #333; padding-top: 20px; flex-wrap: wrap; }
 .service-adcure-mini-stat strong { font-family: var(--font-royal); font-size: 2rem; color: var(--sadc-gold); display: block; }
 .service-adcure-mini-stat span { font-size: 0.8rem; text-transform: uppercase; color: #aaa; }
 
@@ -152,7 +152,7 @@
 .service-adcure-card { background: #fff; padding: 30px; border-top: 3px solid var(--sadc-gold); text-align: center; }
 .service-adcure-card h3 { font-family: var(--font-royal); margin-bottom: 10px; }
 
-.service-adcure-social-stats { display: flex; justify-content: center; gap: 50px; margin-top: 60px; }
+.service-adcure-social-stats { display: flex; justify-content: center; gap: 50px; margin-top: 60px; flex-wrap: wrap; }
 .service-adcure-stat-circle {
   width: 150px; height: 150px; border: 2px dashed var(--sadc-gold); border-radius: 50%;
   display: flex; flex-direction: column; justify-content: center; align-items: center;
@@ -161,11 +161,11 @@
 .service-adcure-stat-circle span { font-family: var(--font-royal); font-size: 2.5rem; color: var(--sadc-black); }
 
 /* --- WEB DEV --- */
-.service-adcure-tech-list { display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 30px; }
+.service-adcure-tech-list { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
 .service-adcure-tech-list span { border: 1px solid var(--sadc-gold); padding: 5px 15px; font-family: var(--font-royal); font-size: 0.8rem; }
 
 .service-adcure-browser-mockup {
-  border: 1px solid #444; background: #222; border-radius: 5px; overflow: hidden; position: relative;
+  border: 1px solid #444; background: #222; border-radius: 5px; overflow: hidden; position: relative; width: 100%;
 }
 .service-adcure-browser-header { background: #333; padding: 10px; display: flex; gap: 5px; }
 .dot { width: 10px; height: 10px; border-radius: 50%; display: block; }
@@ -179,7 +179,7 @@
 /* --- ANALYTICS --- */
 .service-adcure-data-grid { display: flex; justify-content: center; gap: 40px; margin-top: 40px; flex-wrap: wrap; }
 .service-adcure-data-box {
-  background: #fff; padding: 40px; border: 1px solid #ddd; text-align: center; min-width: 200px;
+  background: #fff; padding: 40px; border: 1px solid #ddd; text-align: center; min-width: 200px; flex: 1;
   box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
 .service-adcure-data-box h4 { font-family: var(--font-royal); font-size: 3rem; color: var(--sadc-gold); margin-bottom: 5px; }
@@ -207,7 +207,7 @@
   border: 1px solid var(--sadc-gold); padding: 60px;
 }
 .service-adcure-cta-heading { font-family: var(--font-royal); font-size: 3rem; color: #fff; line-height: 1.1; margin-bottom: 20px; }
-.service-adcure-script { font-family: var(--font-script); color: var(--sadc-gold); font-size: 4rem; margin-left: 10px; }
+.service-adcure-script { font-family: var(--font-script); color: var(--sadc-gold); font-size: 4rem; margin-left: 10px; display: inline-block; }
 .service-adcure-cta-desc { color: #ccc; max-width: 500px; margin-bottom: 30px; }
 
 .service-adcure-rotating-badge { animation: spin 20s linear infinite; }
@@ -231,12 +231,7 @@
 .service-adcure-btn-draw-gold:hover::before, .service-adcure-btn-draw-gold:hover::after { width: 100%; }
 .service-adcure-btn-draw-gold:hover span::before, .service-adcure-btn-draw-gold:hover span::after { height: 100%; }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .service-adcure-split-row, .service-adcure-cta-container { flex-direction: column; }
-  .service-adcure-nav-strip { font-size: 0.8rem; overflow-x: auto; white-space: nowrap; }
-  .service-adcure-main-title { font-size: 3rem; }
-}
+
 /* ========================================================
    RESPONSIVE DESIGN (ALL DEVICES)
 ======================================================== */

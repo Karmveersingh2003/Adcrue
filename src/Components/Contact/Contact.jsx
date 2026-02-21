@@ -18,7 +18,6 @@ const Contact = () => {
       
       {/* --- GLOBAL VINTAGE OVERLAYS --- */}
       <div className="contact-adcure-grain"></div>
-      <div className="contact-adcure-border-frame"></div>
 
       {/* --- SECTION 1: HERO --- */}
       <section className="contact-adcure-hero" id="contact-adcure-hero">

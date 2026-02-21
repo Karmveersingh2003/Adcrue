@@ -86,7 +86,7 @@
 .webdev-adcure-sub-title { font-family: var(--font-royal); color: var(--wdev-gold); letter-spacing: 4px; text-transform: uppercase; }
 
 /* --- INTRO (Split) --- */
-.webdev-adcure-split { flex-direction: row; align-items: center; gap: 60px; }
+.webdev-adcure-split { flex-direction: row; align-items: center; gap: 60px; width: 100%; max-width: 1200px; margin: 0 auto; }
 .webdev-adcure-col-text, .webdev-adcure-col-visual { flex: 1; }
 
 .webdev-adcure-body { font-size: 1.1rem; line-height: 1.8; color: #555; margin-bottom: 20px; }
@@ -197,169 +197,76 @@
 .webdev-adcure-btn-draw-gold:hover span::before, .webdev-adcure-btn-draw-gold:hover span::after { height: 100%; }
 .webdev-adcure-btn-draw-gold:hover { color: var(--wdev-gold); }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .webdev-adcure-split, .webdev-adcure-cta-container { flex-direction: column; text-align: center; }
-  .webdev-adcure-main-title { font-size: 2.5rem; }
-  .webdev-adcure-col-visual { order: -1; margin-bottom: 40px; }
-  .webdev-adcure-img-frame { height: 300px; }
-  .webdev-adcure-cta-text { padding-bottom: 50px; }
-}
+
 /* ========================================================
-   MOBILE RESPONSIVE CSS (WEB DEVELOPMENT PAGE)
+   RESPONSIVE DESIGN (ALL DEVICES)
 ======================================================== */
 
-/* --- LARGE MOBILES & TABLETS (Max-width: 900px) --- */
+/* TABLETS (Max-width 1024px) */
+@media (max-width: 1024px) {
+  .webdev-adcure-main-title { font-size: 3.5rem; }
+  .webdev-adcure-heading { font-size: 2.5rem; }
+  .webdev-adcure-split { gap: 40px; }
+  .webdev-adcure-cta-heading { font-size: 2.5rem; }
+  .webdev-adcure-script { font-size: 3.5rem; }
+}
+
+/* LARGE MOBILES & SMALL TABLETS (Max-width 900px) */
 @media (max-width: 900px) {
-  .webdev-adcure-split, 
-  .webdev-adcure-cta-container { 
-    flex-direction: column; 
-    text-align: center; 
-  }
+  .webdev-adcure-split { flex-direction: column; text-align: center; }
+  .webdev-adcure-col-visual { order: -1; margin-bottom: 20px; width: 100%; max-width: 600px; }
+  .webdev-adcure-highlight { text-align: left; }
   
-  .webdev-adcure-col-visual { 
-    order: -1; 
-    margin-bottom: 50px; 
-    width: 100%;
-  }
-  
-  .webdev-adcure-cta-text { 
-    padding-bottom: 50px; 
-    padding-right: 0;
-  }
-  
-  .webdev-adcure-img-frame { 
-    height: auto; 
-    padding: 15px;
-  }
-  
-  .webdev-adcure-code-bg {
-    padding: 30px;
-    min-height: 250px;
-  }
-  
-  .webdev-adcure-main-title { 
-    font-size: 3.5rem; 
-  }
+  .webdev-adcure-cta-container { flex-direction: column; text-align: center; gap: 40px; padding: 50px 30px; }
+  .webdev-adcure-cta-text { padding-bottom: 20px; }
+  .webdev-adcure-script { display: block; margin: 10px 0; }
+  .webdev-adcure-cta-desc { margin: 0 auto 30px; }
 }
 
-/* --- STANDARD MOBILES (Max-width: 768px) --- */
+/* STANDARD MOBILES (Max-width 768px) */
 @media (max-width: 768px) {
-  .webdev-adcure-section { 
-    padding: 80px 15px; 
-  }
+  .webdev-adcure-section { padding: 80px 15px; }
+  .webdev-adcure-main-title { font-size: 2.8rem; }
+  .webdev-adcure-heading { font-size: 2.2rem; }
+  .webdev-adcure-gold-sub { font-size: 0.85rem; }
+  .webdev-adcure-lead-text { font-size: 1.1rem; }
+  .webdev-adcure-body { font-size: 1rem; }
   
-  .webdev-adcure-main-title { 
-    font-size: 2.8rem; 
-  }
+  .webdev-adcure-img-frame { height: 320px; }
+  .webdev-adcure-badge { width: 120px; height: 120px; font-size: 0.9rem; bottom: -15px; right: -15px; }
   
-  .webdev-adcure-heading { 
-    font-size: 2.2rem; 
-  }
-  
-  .webdev-adcure-gold-sub { 
-    font-size: 0.85rem; 
-  }
-  
-  .webdev-adcure-lead-text, 
-  .webdev-adcure-body,
-  .webdev-adcure-cta-desc { 
-    font-size: 1.05rem; 
-  }
-  
-  .webdev-adcure-divider { 
-    margin: 20px auto; 
-  }
-  
-  .webdev-adcure-badge {
-    width: 110px;
-    height: 110px;
-    font-size: 0.8rem;
-    bottom: -15px;
-    right: -10px;
-  }
-  
-  .webdev-adcure-cta-heading { 
-    font-size: 2.2rem; 
-  }
-  
-  .webdev-adcure-script { 
-    font-size: 3rem; 
-    display: block; 
-    margin: 15px 0 0 0;
-  }
-  
-  .webdev-adcure-cta-container {
-    padding: 40px 20px;
-  }
-  
-  .webdev-adcure-seal-anim {
-    width: 160px;
-    height: 160px;
-  }
-  
-  .webdev-adcure-center-emblem {
-    width: 80px;
-    height: 80px;
-  }
-  
-  .webdev-adcure-emblem-text {
-    font-size: 2.5rem;
-  }
+  .webdev-adcure-cta-container { padding: 40px 20px; }
+  .webdev-adcure-cta-heading { font-size: 2.2rem; }
+  .webdev-adcure-btn-draw-gold { padding: 15px 25px; font-size: 0.85rem; }
 }
 
-/* --- SMALL MOBILES (Max-width: 480px) --- */
+/* SMALL MOBILES (Max-width 480px) */
 @media (max-width: 480px) {
-  .webdev-adcure-section { 
-    padding: 60px 15px; 
-  }
+  .webdev-adcure-section { padding: 60px 15px; }
   
-  .webdev-adcure-main-title { 
-    font-size: 2.2rem; 
-  }
+  /* Hide the border frame on very small screens to prevent overlap */
+  .webdev-adcure-border-frame { display: none; }
   
-  .webdev-adcure-heading { 
-    font-size: 1.8rem; 
-  }
+  .webdev-adcure-main-title { font-size: 2.2rem; }
+  .webdev-adcure-heading { font-size: 1.8rem; }
+  .webdev-adcure-gold-sub { font-size: 0.75rem; }
+  .webdev-adcure-divider { width: 80px; margin: 20px auto; }
   
-  .webdev-adcure-sig-line {
-    font-size: 2.2rem;
-  }
-
-  .webdev-adcure-badge {
-    width: 90px;
-    height: 90px;
-    font-size: 0.7rem;
-    bottom: -10px;
-    right: -5px;
-  }
-
-  .webdev-adcure-cta-heading { 
-    font-size: 1.8rem; 
-  }
+  .webdev-adcure-img-frame { height: 250px; padding: 10px; }
+  .webdev-adcure-code-bg { padding: 20px; }
+  .webdev-adcure-badge { width: 100px; height: 100px; font-size: 0.75rem; bottom: -10px; right: -10px; padding: 5px; }
   
-  .webdev-adcure-script { 
-    font-size: 2.5rem; 
-  }
+  .webdev-adcure-process-card { padding: 30px 15px; }
+  .webdev-adcure-step-num { font-size: 2.5rem; }
   
-  .webdev-adcure-btn-draw-gold { 
-    width: 100%; 
-    display: block; 
-    text-align: center; 
-    padding: 15px 20px;
-    font-size: 0.8rem;
-  }
+  .webdev-adcure-cta-container { padding: 40px 15px; }
+  .webdev-adcure-cta-heading { font-size: 1.8rem; }
+  .webdev-adcure-script { font-size: 2.8rem; }
   
-  .webdev-adcure-process-card {
-    padding: 30px 15px;
-  }
+  .webdev-adcure-seal-anim { width: 150px; height: 150px; }
+  .webdev-adcure-center-emblem { width: 80px; height: 80px; }
+  .webdev-adcure-emblem-text { font-size: 2.5rem; }
   
-  .webdev-adcure-step-num {
-    font-size: 2.5rem;
-  }
-  
-  /* Hide the fixed border frame on very small screens to prevent text overlap */
-  .webdev-adcure-border-frame { 
-    display: none; 
-  }
+  /* Make button full width for easier tapping on small devices */
+  .webdev-adcure-btn-draw-gold { width: 100%; display: block; text-align: center; padding: 15px 20px; font-size: 0.8rem; }
 }
