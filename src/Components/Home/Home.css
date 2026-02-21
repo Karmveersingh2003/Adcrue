@@ -458,7 +458,7 @@ body {
   .panel-visual { order: -1; min-height: 300px; }
   
   .timeline-wrapper::before { left: 20px; }
-  .timeline-item { width: 100%; left: 0; padding-left: 50px; text-align: left; }
+  .timeline-item { width: 100%; left: 1px !important; padding-left: 50px; text-align: left; }
   .timeline-item:nth-child(odd) { text-align: left; }
   .timeline-item:nth-child(odd)::after, .timeline-item:nth-child(even)::after { left: 12.5px; }
   .timeline-item:nth-child(odd) .step-number { right: auto; left: 20px; }
