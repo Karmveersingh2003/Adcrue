@@ -535,3 +535,61 @@ body {
   .input-group input { font-size: 1rem; }
   .input-group label { font-size: 1rem; }
 }
+/* ========================================================
+   THE ULTIMATE X-AXIS SCROLL KILLER
+======================================================== */
+
+/* 1. Force everything to calculate padding/borders inward, not outward */
+*, *::before, *::after {
+  box-sizing: border-box !important;
+}
+
+/* 2. Use 100% instead of 100vw to avoid the scrollbar width bug */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. The most critical step for AOS animations: 
+      Hide overflow on the wrapper DIV, not just the body. */
+.royal-wrapper,
+.about-adcure-wrapper,
+.service-adcure-wrapper,
+.webdev-adcure-wrapper,
+.contact-adcure-wrapper,
+.notfound-adcure-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important; 
+  position: relative;
+  /* Add this clip property as a modern failsafe */
+  overflow: clip; 
+}
+
+/* 4. Prevent sections from blowing out width */
+.section, 
+.movement-section,
+.container,
+.container-wide {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* 5. Fix negative right/left positioning on mobile that pushes width */
+@media (max-width: 900px) {
+  .rotating-stamp {
+    right: 0 !important;
+  }
+  .floating-stat-card {
+    left: 0 !important;
+  }
+  .webdev-adcure-badge {
+    right: 0 !important;
+  }
+  .contact-adcure-seal {
+    right: 0 !important;
+  }
+}
