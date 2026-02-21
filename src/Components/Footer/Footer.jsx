@@ -60,9 +60,9 @@ const Footer = () => {
             <ul className="footer-adcure-links">
               <li><a href="/about">Our Story</a></li>
               <li><a href="/contact">Correspondence</a></li>
-              <li><a href="#">The Archives</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms of Service</a></li>
+              <li><a href="/">The Archives</a></li>
+              <li><a href="/">Privacy Policy</a></li>
+              <li><a href="/">Terms of Service</a></li>
             </ul>
           </div>
 

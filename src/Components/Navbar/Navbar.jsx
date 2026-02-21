@@ -37,7 +37,7 @@ const Navbar = () => {
           <li><a href="/about" className="nav-adcure-link">Our Story</a></li>
           <li><a href="/services" className="nav-adcure-link">Arsenal</a></li>
           <li><a href="/web-dev" className="nav-adcure-link">Architecture</a></li>
-          <li><a href="/contact" className="nav-adcure-link">Correspondence</a></li>
+          <li><a href="/contact" className="nav-adcure-link">Contact Us</a></li>
         </ul>
 
         {/* --- ROYAL CTA --- */}
@@ -66,7 +66,7 @@ const Navbar = () => {
           <li><a href="/about" onClick={() => setIsMenuOpen(false)}>Our Story</a></li>
           <li><a href="/services" onClick={() => setIsMenuOpen(false)}>Services</a></li>
           <li><a href="/web-dev" onClick={() => setIsMenuOpen(false)}>Architecture</a></li>
-          <li><a href="/contact" onClick={() => setIsMenuOpen(false)}>Contact</a></li>
+          <li><a href="/contact" onClick={() => setIsMenuOpen(false)}>Contact Us</a></li>
           <li className="mobile-cta-li">
              <button className="nav-adcure-btn-draw">
                 <span>Book A Call</span>
