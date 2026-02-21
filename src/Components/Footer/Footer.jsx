@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -35,10 +36,21 @@ const Footer = () => {
               sovereign industry leaders through the fusion of AI and classical strategy.
             </p>
             <div className="footer-adcure-socials">
-              <a href="#" className="footer-adcure-social-link">FB</a>
-              <a href="#" className="footer-adcure-social-link">IG</a>
-              <a href="#" className="footer-adcure-social-link">LN</a>
-              <a href="#" className="footer-adcure-social-link">X</a>
+             <a href="#" className="footer-adcure-social-link">
+  <FaFacebookF />
+</a>
+
+<a href="/Insta" className="footer-adcure-social-link">
+  <FaInstagram />
+</a>
+
+<a href="/Linkedin" className="footer-adcure-social-link">
+  <FaLinkedinIn />
+</a>
+
+<a href="/Twitter" className="footer-adcure-social-link">
+  <FaXTwitter />
+</a>
             </div>
           </div>
 
