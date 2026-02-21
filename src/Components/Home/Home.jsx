@@ -282,7 +282,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="timeline-item" data-aos="fade-left">
+            <div className="timeline-item" data-aos="fade-right">
               <div className="step-content">
                 <span className="step-number">02</span>
                 <h3>Strategy Development</h3>
@@ -298,7 +298,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="timeline-item" data-aos="fade-left">
+            <div className="timeline-item" data-aos="fade-right">
               <div className="step-content">
                 <span className="step-number">04</span>
                 <h3>Launch & Optimize</h3>
