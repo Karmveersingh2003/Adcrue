@@ -36,7 +36,7 @@ const Footer = () => {
               sovereign industry leaders through the fusion of AI and classical strategy.
             </p>
             <div className="footer-adcure-socials">
-             <a href="#" className="footer-adcure-social-link">
+             <a href="/fb" className="footer-adcure-social-link">
   <FaFacebookF />
 </a>
 
