@@ -1,0 +1,408 @@
+/* --- FONTS & VARS (Scoped to about-adcure) --- */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Monsieur+La+Doulaise&display=swap');
+
+:root {
+  --adcure-cream: #F9F7F2;
+  --adcure-paper: #F0EAD6;
+  --adcure-gold: #C5A059;
+  --adcure-black: #1B1E23;
+  --adcure-royal: #0f1114;
+  
+  --font-royal: 'Cinzel', serif;
+  --font-elegant: 'Playfair Display', serif;
+  --font-script: 'Monsieur La Doulaise', cursive;
+}
+
+.about-adcure-wrapper {
+  background-color: var(--adcure-cream);
+  color: var(--adcure-black);
+  font-family: var(--font-elegant);
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* --- UTILS --- */
+.about-adcure-section {
+  padding: 100px 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-adcure-container { width: 100%; max-width: 1200px; margin: 0 auto; }
+.text-center { text-align: center; }
+.text-light { color: #fff; }
+
+.about-adcure-grain {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+  opacity: 0.08; pointer-events: none; z-index: 9999;
+}
+
+.about-adcure-border-frame {
+  position: fixed; top: 15px; left: 15px; right: 15px; bottom: 15px;
+  border: 1px solid var(--adcure-gold); pointer-events: none; z-index: 9000;
+}
+
+.about-adcure-heading {
+  font-family: var(--font-royal);
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+/* --- BUTTON STYLE --- */
+.about-adcure-btn-royal {
+  background: transparent;
+  border: none;
+  padding: 20px 40px;
+  cursor: pointer;
+  position: relative;
+  color: var(--adcure-black);
+  font-family: var(--font-royal);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 30px;
+  transition: 0.3s;
+}
+
+.about-adcure-btn-royal::before, .about-adcure-btn-royal::after {
+  content: ''; position: absolute; width: 0; height: 2px; 
+  background: var(--adcure-gold); transition: width 0.4s ease;
+}
+.about-adcure-btn-royal::before { top: 0; left: 0; }
+.about-adcure-btn-royal::after { bottom: 0; right: 0; }
+
+.about-adcure-btn-royal span::before, .about-adcure-btn-royal span::after {
+  content: ''; position: absolute; width: 2px; height: 0;
+  background: var(--adcure-gold); transition: height 0.4s ease;
+}
+.about-adcure-btn-royal span::before { bottom: 0; left: 0; }
+.about-adcure-btn-royal span::after { top: 0; right: 0; }
+
+.about-adcure-btn-royal:hover::before, .about-adcure-btn-royal:hover::after { width: 100%; }
+.about-adcure-btn-royal:hover span::before, .about-adcure-btn-royal:hover span::after { height: 100%; }
+.about-adcure-btn-royal:hover { color: var(--adcure-gold); }
+
+/* --- HERO --- */
+.about-adcure-hero {
+  min-height: 80vh;
+  background-image: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1500&q=80');
+  background-size: cover; background-position: center; background-attachment: fixed;
+  color: #fff; text-align: center;
+}
+
+.about-adcure-hero-overlay {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(15, 17, 20, 0.85);
+}
+
+.about-adcure-content-layer { position: relative; z-index: 10; max-width: 900px; }
+
+.about-adcure-main-title {
+  font-family: var(--font-royal); font-size: 4rem; line-height: 1.1; margin-bottom: 20px;
+}
+
+.about-adcure-gold-text {
+  color: var(--adcure-gold);
+  text-shadow: 0 0 15px rgba(197, 160, 89, 0.3);
+}
+
+.about-adcure-sub-title {
+  font-family: var(--font-royal); color: var(--adcure-gold); letter-spacing: 4px; text-transform: uppercase;
+}
+
+.about-adcure-divider {
+  width: 100px; height: 3px; background: var(--adcure-gold); margin: 30px auto;
+}
+
+.about-adcure-lead-text { font-size: 1.3rem; line-height: 1.6; color: #ddd; }
+
+/* --- ORIGIN STORY --- */
+.about-adcure-split { flex-direction: row; align-items: stretch; padding: 0; }
+.about-adcure-col-text { flex: 1; padding: 80px; display: flex; flex-direction: column; justify-content: center; }
+.about-adcure-body { margin-bottom: 20px; font-size: 1.1rem; line-height: 1.8; color: #555; }
+
+.about-adcure-col-img {
+  flex: 1; background: var(--adcure-black); display: flex; align-items: center; justify-content: center; min-height: 600px;
+}
+
+.about-adcure-img-frame {
+  width: 70%; height: 70%; border: 1px solid var(--adcure-gold); padding: 15px;
+}
+
+.about-adcure-img-inner {
+  width: 100%; height: 100%; background: #333; display: flex; align-items: center; justify-content: center;
+  background-image: url('https://images.unsplash.com/photo-1531973576160-7125cd663d86?auto=format&fit=crop&w=800&q=80');
+  background-size: cover; filter: grayscale(100%); position: relative;
+}
+
+.about-adcure-img-caption {
+  background: rgba(0,0,0,0.8); color: var(--adcure-gold); padding: 20px;
+  font-family: var(--font-royal); text-align: center; border: 1px solid var(--adcure-gold);
+}
+
+/* --- STATS --- */
+.about-adcure-dark { background: var(--adcure-royal); color: #fff; }
+
+.about-adcure-mission-box { max-width: 900px; margin: 0 auto 60px; }
+.about-adcure-gold-sub { font-family: var(--font-royal); color: var(--adcure-gold); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 2px; }
+.about-adcure-mission-text { font-family: var(--font-elegant); font-style: italic; font-size: 1.8rem; line-height: 1.4; }
+
+.about-adcure-stat-grid {
+  display: flex; flex-wrap: wrap; justify-content: space-around; gap: 30px;
+  border-top: 1px solid rgba(197, 160, 89, 0.3); padding-top: 40px;
+}
+
+.about-adcure-stat-item { text-align: center; min-width: 150px; }
+.about-adcure-stat-num {
+  font-family: var(--font-royal); font-size: 3rem; color: var(--adcure-gold); display: block;
+}
+.about-adcure-stat-label { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+
+/* --- USP (What Makes Us Different) --- */
+.about-adcure-bg-paper { background: var(--adcure-paper); }
+.about-adcure-center-text { text-align: center; margin-bottom: 50px; font-style: italic; font-size: 1.2rem; }
+
+.about-adcure-usp-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;
+}
+
+.about-adcure-card {
+  background: #fff; padding: 40px; border: 1px solid transparent; transition: 0.3s;
+}
+.about-adcure-card:hover {
+  border-color: var(--adcure-gold); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+.about-adcure-card h3 {
+  font-family: var(--font-royal); font-size: 1.3rem; margin-bottom: 15px; color: var(--adcure-black);
+}
+
+/* --- CEO QUOTE --- */
+.about-adcure-ceo {
+  background-image: url('https://www.transparenttextures.com/patterns/dark-matter.png');
+  background-color: #1a1a1a; color: #fff; text-align: center;
+}
+.about-adcure-quote-frame {
+  border: 4px double var(--adcure-gold); padding: 60px; max-width: 900px; position: relative;
+}
+.about-adcure-quote-mark {
+  font-family: var(--font-royal); font-size: 6rem; color: var(--adcure-gold); opacity: 0.3;
+  position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%); background: #1a1a1a; padding: 0 20px;
+}
+.about-adcure-quote-text {
+  font-family: var(--font-elegant); font-style: italic; font-size: 2rem; line-height: 1.5; margin-bottom: 30px;
+}
+.about-adcure-name { display: block; font-family: var(--font-royal); font-weight: bold; font-size: 1.2rem; color: var(--adcure-gold); }
+.about-adcure-title { font-size: 0.9rem; letter-spacing: 1px; }
+
+/* --- CULTURE --- */
+.about-adcure-values-list { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 30px; }
+.about-adcure-value-row {
+  display: flex; align-items: center; padding-bottom: 20px; border-bottom: 1px solid #ddd;
+}
+.about-adcure-roman {
+  font-family: var(--font-royal); font-size: 2rem; color: var(--adcure-gold); width: 60px;
+}
+.about-adcure-val-content h4 { font-family: var(--font-royal); font-size: 1.4rem; margin-bottom: 5px; }
+
+/* --- PROCESS / TIMELINE --- */
+.about-adcure-timeline {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 50px;
+}
+.about-adcure-timeline-item {
+  background: #fff; padding: 30px; border-top: 3px solid var(--adcure-gold);
+}
+.about-adcure-step-num {
+  font-family: var(--font-royal); font-size: 2.5rem; color: rgba(197, 160, 89, 0.2); margin-bottom: 10px;
+}
+.about-adcure-timeline-item h4 { font-family: var(--font-royal); margin-bottom: 10px; }
+
+/* --- SUPPORT STATS --- */
+.about-adcure-support-grid { display: flex; justify-content: center; gap: 60px; margin-top: 50px; flex-wrap: wrap; }
+.about-adcure-big-num {
+  font-family: var(--font-royal); font-size: 4rem; color: var(--adcure-gold); line-height: 1; display: block;
+}
+.about-adcure-big-num small { font-size: 1.5rem; }
+.about-adcure-support-box p { font-size: 1rem; text-transform: uppercase; letter-spacing: 2px; }
+
+/* --- CTA --- */
+/* --- SECTION 9: THE ROYAL INVITATION (Redesigned) --- */
+
+.about-adcure-transform-section {
+  background-color: #0f1114; /* Deep Royal Black */
+  min-height: 60vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px;
+}
+
+.about-adcure-overlay-gradient {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: radial-gradient(circle at 70% 50%, rgba(197, 160, 89, 0.15), transparent 60%);
+  pointer-events: none;
+}
+
+.about-adcure-transform-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  border: 1px solid rgba(197, 160, 89, 0.3); /* Subtle Gold Border Frame */
+  padding: 60px;
+  backdrop-filter: blur(5px);
+}
+
+/* LEFT SIDE TEXT */
+.about-adcure-transform-text {
+  flex: 2;
+  padding-right: 40px;
+}
+
+.about-adcure-gold-sub {
+  font-family: var(--font-royal);
+  color: var(--adcure-gold);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.about-adcure-transform-heading {
+  font-family: var(--font-royal);
+  font-size: 3.5rem;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 30px;
+}
+
+.about-adcure-script-highlight {
+  font-family: var(--font-script);
+  color: var(--adcure-gold);
+  font-size: 4.5rem;
+  font-weight: normal;
+  line-height: 0;
+  margin-left: 10px;
+}
+
+.about-adcure-transform-desc {
+  font-family: var(--font-elegant);
+  font-size: 1.2rem;
+  color: #ccc;
+  line-height: 1.8;
+  max-width: 600px;
+  margin-bottom: 40px;
+  border-left: 3px solid var(--adcure-gold);
+  padding-left: 20px;
+}
+
+/* RIGHT SIDE VISUAL (SEAL) */
+.about-adcure-transform-visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-adcure-seal-anim {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-adcure-ring-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: spinRing 20s linear infinite;
+}
+
+.about-adcure-center-emblem {
+  width: 100px;
+  height: 100px;
+  background: var(--adcure-gold);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 30px rgba(197, 160, 89, 0.4);
+  position: relative;
+  z-index: 5;
+}
+
+.about-adcure-emblem-text {
+  font-family: var(--font-royal);
+  font-size: 3rem;
+  color: #0f1114;
+  font-weight: bold;
+}
+
+@keyframes spinRing {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* CUSTOM GOLD BUTTON FOR DARK BACKGROUND */
+.about-adcure-btn-draw-gold {
+  background: transparent;
+  border: none;
+  padding: 20px 40px;
+  cursor: pointer;
+  position: relative;
+  color: #fff; /* Light Text */
+  font-family: var(--font-royal);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold;
+  transition: color 0.4s;
+  font-size: 1rem;
+}
+
+.about-adcure-btn-draw-gold::before, .about-adcure-btn-draw-gold::after {
+  content: ''; position: absolute; width: 0; height: 2px; 
+  background: var(--adcure-gold); transition: width 0.4s ease;
+}
+.about-adcure-btn-draw-gold::before { top: 0; left: 0; }
+.about-adcure-btn-draw-gold::after { bottom: 0; right: 0; }
+
+.about-adcure-btn-draw-gold span::before, .about-adcure-btn-draw-gold span::after {
+  content: ''; position: absolute; width: 2px; height: 0;
+  background: var(--adcure-gold); transition: height 0.4s ease;
+}
+.about-adcure-btn-draw-gold span::before { bottom: 0; left: 0; }
+.about-adcure-btn-draw-gold span::after { top: 0; right: 0; }
+
+.about-adcure-btn-draw-gold:hover::before, .about-adcure-btn-draw-gold:hover::after { width: 100%; }
+.about-adcure-btn-draw-gold:hover span::before, .about-adcure-btn-draw-gold:hover span::after { height: 100%; }
+.about-adcure-btn-draw-gold:hover { color: var(--adcure-gold); }
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+  .about-adcure-transform-container { flex-direction: column; text-align: center; padding: 40px 20px; }
+  .about-adcure-transform-text { padding-right: 0; padding-bottom: 50px; }
+  .about-adcure-transform-desc { margin: 0 auto 40px; border-left: none; border-bottom: 3px solid var(--adcure-gold); padding-bottom: 20px; padding-left: 0; }
+  .about-adcure-transform-heading { font-size: 2.5rem; }
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .about-adcure-main-title { font-size: 2.5rem; }
+  .about-adcure-split { flex-direction: column; }
+  .about-adcure-col-img { min-height: 300px; order: -1; }
+  .about-adcure-quote-text { font-size: 1.2rem; }
+}

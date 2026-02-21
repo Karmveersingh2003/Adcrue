@@ -1,0 +1,226 @@
+/* --- FONTS & VARS (Scoped) --- */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Monsieur+La+Doulaise&display=swap');
+
+:root {
+  --cadc-cream: #F9F7F2;
+  --cadc-paper: #F0EAD6;
+  --cadc-gold: #C5A059;
+  --cadc-black: #1B1E23;
+  --cadc-royal: #0f1114;
+  
+  --font-royal: 'Cinzel', serif;
+  --font-elegant: 'Playfair Display', serif;
+  --font-script: 'Monsieur La Doulaise', cursive;
+}
+
+.contact-adcure-wrapper {
+  background-color: var(--cadc-cream);
+  color: var(--cadc-black);
+  font-family: var(--font-elegant);
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* --- UTILS --- */
+.contact-adcure-section {
+  padding: 80px 20px 120px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-adcure-container { width: 100%; max-width: 1200px; margin: 0 auto; }
+.text-center { text-align: center; }
+
+.contact-adcure-grain {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+  opacity: 0.08; pointer-events: none; z-index: 9999;
+}
+
+.contact-adcure-border-frame {
+  position: fixed; top: 15px; left: 15px; right: 15px; bottom: 15px;
+  border: 1px solid var(--cadc-gold); pointer-events: none; z-index: 9000;
+}
+
+/* --- HERO --- */
+.contact-adcure-hero {
+  min-height: 50vh;
+  background-image: url('https://images.unsplash.com/photo-1596526131083-e8c633c948d2?auto=format&fit=crop&w=1500&q=80'); /* Vintage Desk/Mail */
+  background-size: cover; background-position: center;
+  display: flex; align-items: center; justify-content: center;
+  position: relative; color: #fff; padding: 100px 20px 40px;
+}
+
+.contact-adcure-hero-overlay {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(to bottom, rgba(15, 17, 20, 0.9) 0%, rgba(15, 17, 20, 0.95) 100%);
+}
+
+.contact-adcure-hero-content { position: relative; z-index: 10; max-width: 800px; }
+
+.contact-adcure-crown-icon { margin-bottom: 15px; }
+
+.contact-adcure-gold-sub {
+  font-family: var(--font-royal); color: var(--cadc-gold); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 10px;
+}
+
+.contact-adcure-main-title {
+  font-family: var(--font-royal); font-size: 4rem; line-height: 1.1; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px;
+}
+.contact-adcure-script {
+  font-family: var(--font-script); color: var(--cadc-gold); font-size: 5rem; text-transform: none; font-weight: normal; margin-left: 10px;
+}
+
+.contact-adcure-divider { width: 100px; height: 3px; background: var(--cadc-gold); margin: 20px auto 30px; }
+.contact-adcure-lead-text { font-size: 1.2rem; line-height: 1.6; color: #ccc; }
+
+/* --- SPLIT LAYOUT --- */
+.contact-adcure-split-wrapper {
+  display: flex;
+  background: #fff;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+  border: 1px solid var(--cadc-gold);
+  margin-top: -60px; /* Overlap the hero section */
+  position: relative;
+  z-index: 20;
+  flex-wrap: wrap;
+}
+
+/* LEFT: INFO PANEL */
+.contact-adcure-info-panel {
+  flex: 1;
+  min-width: 350px;
+  background: var(--cadc-royal);
+  color: #fff;
+  padding: 60px 50px;
+  position: relative;
+  overflow: hidden;
+}
+/* Internal elegant border */
+.contact-adcure-info-panel::before {
+  content: ''; position: absolute; top: 15px; left: 15px; right: 15px; bottom: 15px;
+  border: 1px solid rgba(197, 160, 89, 0.3); pointer-events: none;
+}
+
+.contact-adcure-panel-heading {
+  font-family: var(--font-royal); font-size: 2rem; color: var(--cadc-gold); margin-bottom: 15px;
+}
+.contact-adcure-panel-desc { color: #aaa; font-style: italic; margin-bottom: 40px; font-size: 1.1rem; }
+
+.contact-adcure-info-list { display: flex; flex-direction: column; gap: 30px; }
+.contact-adcure-info-item { display: flex; align-items: flex-start; gap: 20px; }
+.contact-adcure-info-icon {
+  width: 50px; height: 50px; border: 1px solid var(--cadc-gold); border-radius: 50%;
+  display: flex; justify-content: center; align-items: center; background: rgba(197, 160, 89, 0.05);
+}
+.contact-adcure-info-text h4 { font-family: var(--font-royal); color: var(--cadc-gold); margin-bottom: 5px; font-size: 1.1rem; }
+.contact-adcure-info-text p { color: #fff; font-size: 1.1rem; line-height: 1.5; }
+
+/* Decorative Seal on Dark Panel */
+.contact-adcure-seal {
+  position: absolute; bottom: -30px; right: -30px;
+  width: 150px; height: 150px; border-radius: 50%;
+  border: 2px dashed rgba(197, 160, 89, 0.2);
+  display: flex; justify-content: center; align-items: center;
+  animation: rotate 30s linear infinite;
+}
+.contact-adcure-seal-text { font-family: var(--font-royal); font-size: 5rem; color: rgba(197, 160, 89, 0.1); font-weight: bold; }
+@keyframes rotate { 100% { transform: rotate(360deg); } }
+
+
+/* RIGHT: VINTAGE FORM */
+.contact-adcure-form-panel {
+  flex: 1.5;
+  min-width: 350px;
+  background: var(--cadc-paper); /* Paper color */
+  padding: 60px 80px;
+}
+
+.contact-adcure-form-heading { font-family: var(--font-royal); font-size: 2.5rem; color: var(--cadc-black); margin-bottom: 10px; }
+.contact-adcure-form-sub { font-style: italic; color: #666; margin-bottom: 40px; font-size: 1.1rem; border-left: 2px solid var(--cadc-gold); padding-left: 15px; }
+
+.contact-adcure-vintage-form { display: flex; flex-direction: column; gap: 35px; }
+
+.contact-adcure-input-group { position: relative; width: 100%; }
+
+.contact-adcure-input-group input, 
+.contact-adcure-input-group select, 
+.contact-adcure-input-group textarea {
+  width: 100%; background: transparent; border: none; border-bottom: 1px solid #aaa;
+  padding: 10px 0; font-family: var(--font-elegant); font-size: 1.2rem; color: var(--cadc-black); outline: none;
+  border-radius: 0; /* fixes iOS rounding */
+  -webkit-appearance: none; /* removes default styling for select */
+}
+
+/* Custom styling for standard select arrow */
+.contact-adcure-input-group select {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C5A059' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0px center;
+  background-size: 20px;
+}
+
+.contact-adcure-input-group textarea { resize: vertical; min-height: 100px; }
+
+/* Floating Labels Magic */
+.contact-adcure-input-group label {
+  position: absolute; top: 10px; left: 0; color: #777; font-size: 1.1rem;
+  transition: 0.3s ease all; pointer-events: none;
+}
+
+/* When input is focused, OR when input is NOT empty (placeholder=" " is used for a CSS hack) */
+.contact-adcure-input-group input:focus ~ label,
+.contact-adcure-input-group input:not(:placeholder-shown) ~ label,
+.contact-adcure-input-group textarea:focus ~ label,
+.contact-adcure-input-group textarea:not(:placeholder-shown) ~ label {
+  top: -20px; font-size: 0.85rem; color: var(--cadc-gold); font-family: var(--font-royal); font-weight: bold; letter-spacing: 1px; text-transform: uppercase;
+}
+
+/* Select element float logic (Needs a valid option selected to float) */
+.contact-adcure-input-group select:focus ~ label,
+.contact-adcure-input-group select:valid ~ label {
+  top: -20px; font-size: 0.85rem; color: var(--cadc-gold); font-family: var(--font-royal); font-weight: bold; letter-spacing: 1px; text-transform: uppercase;
+}
+
+/* The Animated Gold Underline */
+.contact-adcure-bar { position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--cadc-gold); transition: 0.4s; }
+.contact-adcure-input-group input:focus ~ .contact-adcure-bar,
+.contact-adcure-input-group select:focus ~ .contact-adcure-bar,
+.contact-adcure-input-group textarea:focus ~ .contact-adcure-bar { width: 100%; }
+
+/* --- CUSTOM DRAW BORDER BUTTON --- */
+.contact-adcure-btn-container { margin-top: 15px; }
+
+.contact-adcure-btn-draw-border {
+  background: transparent; border: none; padding: 20px 40px; cursor: pointer; position: relative;
+  color: var(--cadc-black); font-family: var(--font-royal); text-transform: uppercase; letter-spacing: 3px;
+  font-weight: bold; transition: color 0.4s; font-size: 0.9rem; display: inline-block; width: 100%;
+}
+
+.contact-adcure-btn-draw-border::before, .contact-adcure-btn-draw-border::after {
+  content: ''; position: absolute; width: 0; height: 2px; background: var(--cadc-gold); transition: width 0.4s ease;
+}
+.contact-adcure-btn-draw-border::before { top: 0; left: 0; }
+.contact-adcure-btn-draw-border::after { bottom: 0; right: 0; }
+
+.contact-adcure-btn-draw-border span::before, .contact-adcure-btn-draw-border span::after {
+  content: ''; position: absolute; width: 2px; height: 0; background: var(--cadc-gold); transition: height 0.4s ease;
+}
+.contact-adcure-btn-draw-border span::before { bottom: 0; left: 0; }
+.contact-adcure-btn-draw-border span::after { top: 0; right: 0; }
+
+.contact-adcure-btn-draw-border:hover::before, .contact-adcure-btn-draw-border:hover::after { width: 100%; }
+.contact-adcure-btn-draw-border:hover span::before, .contact-adcure-btn-draw-border:hover span::after { height: 100%; }
+.contact-adcure-btn-draw-border:hover { color: var(--cadc-gold); }
+
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 900px) {
+  .contact-adcure-split-wrapper { flex-direction: column; margin-top: 0; box-shadow: none; border-left: none; border-right: none; }
+  .contact-adcure-info-panel { padding: 50px 20px; }
+  .contact-adcure-form-panel { padding: 50px 20px; }
+  .contact-adcure-main-title { font-size: 3rem; }
+  .contact-adcure-script { font-size: 3.5rem; }
+  .contact-adcure-hero { min-height: 40vh; padding-top: 120px; }
+}
