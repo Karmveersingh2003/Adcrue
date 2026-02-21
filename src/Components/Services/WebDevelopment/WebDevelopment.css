@@ -205,3 +205,161 @@
   .webdev-adcure-img-frame { height: 300px; }
   .webdev-adcure-cta-text { padding-bottom: 50px; }
 }
+/* ========================================================
+   MOBILE RESPONSIVE CSS (WEB DEVELOPMENT PAGE)
+======================================================== */
+
+/* --- LARGE MOBILES & TABLETS (Max-width: 900px) --- */
+@media (max-width: 900px) {
+  .webdev-adcure-split, 
+  .webdev-adcure-cta-container { 
+    flex-direction: column; 
+    text-align: center; 
+  }
+  
+  .webdev-adcure-col-visual { 
+    order: -1; 
+    margin-bottom: 50px; 
+    width: 100%;
+  }
+  
+  .webdev-adcure-cta-text { 
+    padding-bottom: 50px; 
+    padding-right: 0;
+  }
+  
+  .webdev-adcure-img-frame { 
+    height: auto; 
+    padding: 15px;
+  }
+  
+  .webdev-adcure-code-bg {
+    padding: 30px;
+    min-height: 250px;
+  }
+  
+  .webdev-adcure-main-title { 
+    font-size: 3.5rem; 
+  }
+}
+
+/* --- STANDARD MOBILES (Max-width: 768px) --- */
+@media (max-width: 768px) {
+  .webdev-adcure-section { 
+    padding: 80px 15px; 
+  }
+  
+  .webdev-adcure-main-title { 
+    font-size: 2.8rem; 
+  }
+  
+  .webdev-adcure-heading { 
+    font-size: 2.2rem; 
+  }
+  
+  .webdev-adcure-gold-sub { 
+    font-size: 0.85rem; 
+  }
+  
+  .webdev-adcure-lead-text, 
+  .webdev-adcure-body,
+  .webdev-adcure-cta-desc { 
+    font-size: 1.05rem; 
+  }
+  
+  .webdev-adcure-divider { 
+    margin: 20px auto; 
+  }
+  
+  .webdev-adcure-badge {
+    width: 110px;
+    height: 110px;
+    font-size: 0.8rem;
+    bottom: -15px;
+    right: -10px;
+  }
+  
+  .webdev-adcure-cta-heading { 
+    font-size: 2.2rem; 
+  }
+  
+  .webdev-adcure-script { 
+    font-size: 3rem; 
+    display: block; 
+    margin: 15px 0 0 0;
+  }
+  
+  .webdev-adcure-cta-container {
+    padding: 40px 20px;
+  }
+  
+  .webdev-adcure-seal-anim {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .webdev-adcure-center-emblem {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .webdev-adcure-emblem-text {
+    font-size: 2.5rem;
+  }
+}
+
+/* --- SMALL MOBILES (Max-width: 480px) --- */
+@media (max-width: 480px) {
+  .webdev-adcure-section { 
+    padding: 60px 15px; 
+  }
+  
+  .webdev-adcure-main-title { 
+    font-size: 2.2rem; 
+  }
+  
+  .webdev-adcure-heading { 
+    font-size: 1.8rem; 
+  }
+  
+  .webdev-adcure-sig-line {
+    font-size: 2.2rem;
+  }
+
+  .webdev-adcure-badge {
+    width: 90px;
+    height: 90px;
+    font-size: 0.7rem;
+    bottom: -10px;
+    right: -5px;
+  }
+
+  .webdev-adcure-cta-heading { 
+    font-size: 1.8rem; 
+  }
+  
+  .webdev-adcure-script { 
+    font-size: 2.5rem; 
+  }
+  
+  .webdev-adcure-btn-draw-gold { 
+    width: 100%; 
+    display: block; 
+    text-align: center; 
+    padding: 15px 20px;
+    font-size: 0.8rem;
+  }
+  
+  .webdev-adcure-process-card {
+    padding: 30px 15px;
+  }
+  
+  .webdev-adcure-step-num {
+    font-size: 2.5rem;
+  }
+  
+  /* Hide the fixed border frame on very small screens to prevent text overlap */
+  .webdev-adcure-border-frame { 
+    display: none; 
+  }
+}
