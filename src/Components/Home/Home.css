@@ -352,13 +352,6 @@ body {
   to { transform: rotate(360deg); }
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .movement-container { flex-direction: column; gap: 60px; }
-  .floating-stat-card { left: 0; bottom: -30px; }
-  .rotating-stamp { top: 0; right: 0; }
-  .image-composition { height: 400px; width: 100%; }
-}
 
 /* --- SECTION 5: CODE OF HONOR (Cards) --- */
 .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 60px; width: 100%; }
@@ -451,16 +444,94 @@ body {
 
 .btn-center { text-align: center; width: 100%; display: flex; justify-content: center; }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .hero-title { font-size: 3rem; }
-  .split-panel { flex-direction: column; }
-  .panel-visual { order: -1; min-height: 300px; }
+
+/* ========================================================
+   RESPONSIVE DESIGN (ALL DEVICES) - ADDED
+======================================================== */
+
+/* TABLETS & SMALL LAPTOPS (Max-width 1024px) */
+@media (max-width: 1024px) {
+  .hero-title { font-size: 3.5rem; }
+  .section-heading { font-size: 2.5rem; }
+  .banner-quote { font-size: 2.5rem; }
+  .movement-container { gap: 40px; }
+  .image-composition { height: 500px; }
+}
+
+/* LARGE MOBILES & SMALL TABLETS (Max-width 900px) */
+@media (max-width: 900px) {
+  .split-panel { flex-direction: column; text-align: center; }
+  .panel-visual { order: -1; min-height: 400px; width: 100%; }
   
+  .movement-container { flex-direction: column; text-align: center; }
+  .movement-visual { width: 100%; margin-top: 40px; min-height: 400px; }
+  .image-composition { height: 400px; max-width: 100%; }
+  
+  /* Adjust absolute elements for stacked view */
+  .floating-stat-card { left: 0; bottom: -30px; padding: 15px 25px; }
+  .rotating-stamp { top: -15px; right: -15px; width: 80px; height: 80px; }
+  
+  .feature-row { flex-direction: column; align-items: center; text-align: center; gap: 10px; }
+  .feature-num { font-size: 2rem; }
+  .feature-desc { max-width: 100%; }
+}
+
+/* STANDARD MOBILES (Max-width 768px) */
+@media (max-width: 768px) {
+  .section { padding: 80px 15px; }
+  .hero-title { font-size: 2.8rem; }
+  .hero-desc { font-size: 1rem; padding: 0 10px; }
+  
+  .section-heading { font-size: 2.2rem; }
+  .sub-header { font-size: 0.85rem; }
+  
+  .stats-grid, .card-grid, .services-grid { gap: 20px; }
+  .stat-num { font-size: 3rem; }
+  
+  /* Timeline fixes for mobile */
   .timeline-wrapper::before { left: 20px; }
-  .timeline-item { width: 100%; left: 0px; padding-left: 50px; text-align: left; }
-  .timeline-item:nth-child(odd) { text-align: left; }
-  .timeline-item:nth-child(odd)::after, .timeline-item:nth-child(even)::after { left: 12.5px; }
-  .timeline-item:nth-child(odd) .step-number { right: auto; left: 20px; }
+  .timeline-item { width: 100%; left: 0 !important; padding-left: 50px; text-align: left !important; }
+  .timeline-item::after { left: 12.5px !important; right: auto !important; }
+  .timeline-item .step-number { left: 20px !important; right: auto !important; font-size: 2.5rem; top: 15px; }
+  
+  .banner-quote { font-size: 2rem; }
+  
+  .contact-frame { padding: 40px 20px; }
+  .cursive-heading { font-size: 3rem; }
+  
+  .testimonial-card { padding: 30px 20px; }
+  .quote { font-size: 1.2rem; }
+  
   .corner-ornament { display: none; }
+}
+
+/* SMALL MOBILES & FOLDABLES (Max-width 480px) */
+@media (max-width: 480px) {
+  .section { padding: 60px 15px; }
+  
+  .hero-title { font-size: 2.2rem; }
+  .section-heading { font-size: 1.8rem; }
+  
+  .image-composition { height: 300px; }
+  .floating-stat-card { padding: 10px 15px; border-left-width: 3px; }
+  .huge-num { font-size: 2rem; }
+  .small-label { font-size: 0.8rem; }
+  .rotating-stamp { display: none; } /* Hidden to prevent overlap on tiny screens */
+  
+  .stat-num { font-size: 2.5rem; }
+  .roman-num { font-size: 2rem; }
+  .card-border { padding: 30px 15px; }
+  
+  .btn-draw-border { width: 100%; display: block; text-align: center; padding: 15px 20px; font-size: 0.8rem; }
+  
+  .timeline-item { padding-left: 40px; padding-right: 10px; }
+  .timeline-wrapper::before { left: 15px; }
+  .timeline-item::after { left: 7.5px !important; width: 12px; height: 12px; }
+  .step-content { padding: 20px 15px; }
+  .timeline-item .step-number { font-size: 2rem; top: 5px; }
+  
+  .contact-frame { padding: 30px 15px; }
+  .cursive-heading { font-size: 2.5rem; }
+  .input-group input { font-size: 1rem; }
+  .input-group label { font-size: 1rem; }
 }
