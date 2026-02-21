@@ -237,3 +237,109 @@
   .service-adcure-nav-strip { font-size: 0.8rem; overflow-x: auto; white-space: nowrap; }
   .service-adcure-main-title { font-size: 3rem; }
 }
+/* ========================================================
+   RESPONSIVE DESIGN (ALL DEVICES)
+======================================================== */
+
+/* TABLETS (Max-width 1024px) */
+@media (max-width: 1024px) {
+  .service-adcure-main-title { font-size: 3.5rem; }
+  .service-adcure-heading { font-size: 2.5rem; }
+  .service-adcure-split-row { gap: 40px; }
+  .service-adcure-img-inner { height: 350px; }
+  .service-adcure-cta-heading { font-size: 2.5rem; }
+  .service-adcure-script { font-size: 3.5rem; }
+}
+
+/* LARGE MOBILES / SMALL TABLETS (Max-width 900px) */
+@media (max-width: 900px) {
+  .service-adcure-split-row, 
+  .service-adcure-split-row.reverse { 
+    flex-direction: column; 
+    text-align: center;
+  }
+  
+  .service-adcure-visual-col { margin-top: 30px; }
+  .service-adcure-highlight-box { text-align: left; }
+  .service-adcure-list-grid { text-align: left; justify-content: center; }
+  
+  /* Reset Float position for stacked layout */
+  .service-adcure-stat-float {
+    position: relative; 
+    bottom: auto; left: auto; 
+    margin: -30px auto 0; 
+    max-width: 80%; 
+    z-index: 5; 
+    text-align: center;
+  }
+  
+  .service-adcure-cta-container { flex-direction: column; text-align: center; gap: 40px; padding: 50px 30px; }
+  .service-adcure-cta-desc { margin: 0 auto 30px; }
+  .service-adcure-script { display: block; margin: 10px 0; }
+}
+
+/* STANDARD MOBILES (Max-width 768px) */
+@media (max-width: 768px) {
+  .service-adcure-section { padding: 80px 15px; }
+  .service-adcure-block { padding: 80px 15px; }
+  
+  .service-adcure-main-title { font-size: 2.5rem; }
+  .service-adcure-heading { font-size: 2.2rem; }
+  .service-adcure-gold-sub { font-size: 0.85rem; }
+  .service-adcure-lead-text { font-size: 1.1rem; }
+  
+  /* Make Nav Strip Scrollable Smoothly */
+  .service-adcure-nav-strip { 
+    font-size: 0.8rem; 
+    overflow-x: auto; 
+    white-space: nowrap; 
+    -webkit-overflow-scrolling: touch; 
+    padding: 15px 5px;
+  }
+  .service-adcure-nav-strip::-webkit-scrollbar { display: none; }
+  
+  .service-adcure-img-inner { height: 280px; }
+  .service-adcure-browser-body { height: 250px; }
+  
+  .service-adcure-stat-row { flex-direction: column; align-items: center; gap: 20px; }
+  .service-adcure-mini-stat strong { font-size: 1.8rem; }
+  
+  .service-adcure-grid-3 { grid-template-columns: 1fr; }
+  .service-adcure-social-stats { gap: 20px; }
+  .service-adcure-stat-circle { width: 130px; height: 130px; }
+  .service-adcure-stat-circle span { font-size: 2rem; }
+  
+  .service-adcure-data-box h4 { font-size: 2.5rem; }
+  
+  .service-adcure-cta-heading { font-size: 2.2rem; }
+  .service-adcure-script { font-size: 3rem; }
+  .service-adcure-btn-draw-gold { padding: 15px 25px; font-size: 0.8rem; }
+}
+
+/* SMALL MOBILES (Max-width 480px) */
+@media (max-width: 480px) {
+  .service-adcure-section, .service-adcure-block { padding: 60px 15px; }
+  
+  .service-adcure-main-title { font-size: 2rem; }
+  .service-adcure-heading { font-size: 1.8rem; }
+  .service-adcure-body, .service-adcure-body-narrow { font-size: 1rem; }
+  
+  .service-adcure-img-frame { padding: 10px; }
+  .service-adcure-img-inner { height: 200px; }
+  .service-adcure-stat-float { padding: 15px; width: 90%; }
+  .service-adcure-stat-float span { font-size: 1.8rem; }
+  
+  .service-adcure-browser-body { height: 200px; }
+  .service-adcure-stat-tag { font-size: 0.8rem; padding: 8px 12px; bottom: 10px; right: 10px; }
+  
+  .service-adcure-tech-list { justify-content: center; }
+  .service-adcure-tech-list span { padding: 5px 10px; font-size: 0.75rem; }
+  
+  .service-adcure-cta-container { padding: 40px 15px; }
+  .service-adcure-cta-heading { font-size: 1.8rem; }
+  .service-adcure-script { font-size: 2.5rem; }
+  .service-adcure-btn-draw-gold { width: 100%; display: block; text-align: center; }
+  
+  /* Hide the border frame on very small screens to prevent overlap issues */
+  .service-adcure-border-frame { display: none; }
+}
