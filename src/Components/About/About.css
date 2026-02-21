@@ -405,4 +405,9 @@
   .about-adcure-split { flex-direction: column; }
   .about-adcure-col-img { min-height: 300px; order: -1; }
   .about-adcure-quote-text { font-size: 1.2rem; }
+  .about-adcure-col-text {
+   
+    padding: 30px !important;
+   
+}
 }
